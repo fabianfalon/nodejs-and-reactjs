@@ -18,11 +18,8 @@ api.get('/products', (req, res) => {
 api.post('/products', function (req, res) {
   Product.create(req.body, function (err, post) {
     if (err) return next(err);
-    Product.find(function (err, products) {
-      if (err) return next(err);
-      res.status(201).json(products)
-      res.end()
-    });
+    res.status(201).json(post)
+    res.end()
   });
 })
 

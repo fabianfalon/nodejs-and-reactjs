@@ -40,14 +40,14 @@ function products(state = initialState, action = {}) {
         loading: true
       };
     case 'ADD_PRODUCTS_SUCCESS':
-/*       return Object.assign({}, state, {
-        products: [action.payload]
-      }) */
-      return {
+      return Object.assign({}, state, {
+        products: state.products.concat([action.payload])
+      });
+/*       return {
         ...state,
         loading: false,
         products: action.payload
-      };
+      }; */
     case 'ADD_PRODUCTS_FAIL':
       return {
         ...state,
