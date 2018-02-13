@@ -64,7 +64,6 @@ class App extends Component {
 }
 
 function mapStateToProps(state, props) {
-  console.log(state.products)
   return {
     products: state.products,
   };
