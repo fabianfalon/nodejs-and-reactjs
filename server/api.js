@@ -9,7 +9,7 @@ const api = express.Router()
 api.get('/products', (req, res) => {
   Product.find(function (err, products) {
     if (err) return next(err);
-    res.status(202).json(products)
+    res.status(200).json(products)
     res.end()
   });
 })
